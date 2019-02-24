@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchUsers } from '../actions';
-import Loading from './Loading';
 
 class Users extends Component {
     componentDidMount(){
@@ -39,11 +38,7 @@ class Users extends Component {
     }
 
     render(){
-        if(this.props.users.length > 0){
             return this.renderList()
-        }
-
-        return <Loading message="Loading ..."></Loading>;
     }
 };
 

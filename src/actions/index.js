@@ -1,5 +1,4 @@
 import jsonholder from '../apis/jsonholder';
-
 export const fetchUsers = () => async dispatch => {
     const response = await jsonholder.get('/users');
     dispatch({type:'FETCH_USERS',payload:response.data});

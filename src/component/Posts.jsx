@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import { fetchPosts } from '../actions';
-import Loading from './Loading';
 
 class Posts extends Component {
     componentDidMount(){
@@ -33,11 +32,7 @@ class Posts extends Component {
         );
     }
     render(){
-        if(this.props.posts.length>0){
-            return this.renderList()
-        }
-
-        return <Loading message="Loading ..."></Loading>;
+        return this.renderList()
     }
 };
 
